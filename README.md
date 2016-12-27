@@ -6,13 +6,21 @@ This tests are written in Java using two libraries, 'Selenium' for the UI, and '
 The selected framework was Jbehave, due to is an easy way for the tester to administrate the Test Cases, and it gives a quick feedback through the reports of the causes of the failures.
 Also, The 'BDD' ('Behave Driven Development') approach, gives a cleaner and faster look to all of the stakeholders who want to understand quickly how the developed feature works.
 
+Please notice that the file 'test_cases.xlsx' is located in the main folder.
+
+### Manual Test Cases
+
+Within the root you will find the file 'test_cases.xlsx' that holds all of the test cases for this application.
+Please also notice that the first tab, has a summary of the test cases, with the pass/fail ratio.
+On the second that, the Test Cases are properly described with its respective execution status.
+
 ### Jbehave Suite
 
-The Jbehave Test Suite executes 9 (nine) tests to verify the behaviour of the Computer DataBase website (http://computer-database.herokuapp.com/).
+The Jbehave Test Suite executes 10 (ten) tests to verify the behaviour of the Computer DataBase website (http://computer-database.herokuapp.com/).
 
 ## Test Suite
 
-The suite has nine different test cases:
+The suite has ten different test cases:
 
 - CreateAndDeleteComputer_ComputerDB: This test creates a new entry with all the parameters, saves it, re opens it and then deletes it;
 - CreateAndUpdateComputer_ComputerDB: This test creates a new entry with all the parameters, saves it, re opens it and then updates it;
@@ -22,7 +30,8 @@ The suite has nine different test cases:
 - VerifyCorrectDateFormat_ComputerDB: This test verifies that the date field only accepts the format 'yyyy-MM-dd';
 - VerifyErrorOnEmptyCompName: This test verifies that no computer can be saved with an empty name;
 - VerifyPagination_ComputerDB: This test verifies that the application allows browsing between different pages;
-- CreateNewComputerWithoutDates_ComputerDB: The purpose of this test case is to verify that the date fields aren't mandatory.
+- CreateNewComputerWithoutDates_ComputerDB: The purpose of this test case is to verify that the date fields aren't mandatory;
+- CreateAPreviouslyDeletedComputer_ComputerDB: This test creates a new entry with all the parameters, saves it, re opens it and then deletes it and then creates the same entry once again.
 
 
 Each of this tests, except the one named 'CreateAndDeleteComputer_ComputerDB' and the ones that don't save a new entry, have their own personal Tear Down process. The Tear Down is executed by sending a 'POST' request the URL of the created entry adding '/delete' at the end of it.
