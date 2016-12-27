@@ -1,4 +1,4 @@
-Scenario:  This test creates a new entry with all the parameters, saves it, re opens it and then deletes it.
+Scenario:  This test creates a new entry with all the parameters, saves it, re opens it and then deletes it and then creates the same entry once again.
 
 Given I open the url computer-database.herokuapp.com
 When I click on the 'Add new computer' button
